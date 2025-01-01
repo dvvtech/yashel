@@ -7,3 +7,5 @@ http://localhost:5500/
 
 navToggle  menu button for small screen
 navPanel   side menu
+
+Formatting Shift + Alt + F
