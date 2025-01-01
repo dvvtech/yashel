@@ -1933,31 +1933,32 @@ input, select, textarea {
 
 /* Logo */
 
-	#logo {
-		display: inline-block;
-	}
+#logo {
+    display: flex; /* Используем flexbox для горизонтального расположения */
+    align-items: center;
+}
 
-		#logo h1 {
-			background: #ff4486;
-			color: #fff;
-			border-radius: 6px;
-			font-family: 'Oleo Script', serif;
-			font-weight: 400;
-			padding: 0.25em 0.2em 0.25em 0.2em;
-			font-size: 3.25em;
-			letter-spacing: 0.05em;
-			display: inline-block;
-			vertical-align: middle;
-		}
+#logo h1 {
+    background: #ff4486;
+    color: #fff;
+    border-radius: 6px;
+    font-family: 'Oleo Script', serif;
+    font-weight: 400;
+    padding: 0.25em 0.2em 0.25em 0.2em;
+    font-size: 3.25em;
+    letter-spacing: 0.05em;
+    margin: 0; /* Убираем внешние отступы */
+}
 
-		#logo span {
-			font-weight: 800;
-			line-height: 4.5em;
-			letter-spacing: 0.025em;
-			font-size: 0.9em;
-			vertical-align: middle;
-			margin: 0 0 0 1.25em;
-		}
+#logo span {
+    font-weight: 800;
+    font-size: 0.9em;
+    margin-left: 1.25em; /* Расстояние между h1 и span */
+    line-height: 1.2; /* Регулируем расстояние между строками внутри span */
+    display: inline-flex;
+    flex-direction: column; /* Строки внутри span расположены вертикально */
+    justify-content: center;
+}
 
 /* Nav */
 
@@ -2264,9 +2265,35 @@ input, select, textarea {
 
 		/* Logo */
 
-			#logo span {
+			/*#logo span {
 				display: block;
 				margin: 0;
+			}*/
+
+			/*#logo {
+				margin: 0 auto; 
+				text-align: center; 
+			}
+		
+			#logo h1 {
+				font-size: 1.5em; 
+			}
+		
+			#logo span {
+				display: block; 
+				font-size: 1em; 
+			}*/
+
+			#logo {
+				display: flex; /* Используем flexbox для центрирования */
+				justify-content: center; /* Центрирование по горизонтали */
+				align-items: center; /* Центрирование по вертикали */
+				margin: 0 auto; /* Страхуемся от лишних отступов */
+				text-align: center; /* Центрируем текст внутри */
+			}
+		
+			#logo h1, #logo span {
+				text-align: center; /* Центрируем текстовые элементы */
 			}
 
 		/* Nav */
@@ -2631,13 +2658,27 @@ input, select, textarea {
 
 		/* Logo */
 
-			#logo h1 {
+			/*#logo h1 {
 				font-size: 2.75em;
 				padding: 0.2em 0.275em;
 			}
 
 			#logo span {
 				line-height: 3em;
+			}*/
+
+			#logo {
+				margin: 0 auto;
+				text-align: center;
+				padding: 1em 0; /* Добавляет немного пространства */
+			}
+		
+			#logo h1 {
+				font-size: 1.25em;
+			}
+		
+			#logo span {
+				font-size: 0.9em;
 			}
 
 		/* Banner */
