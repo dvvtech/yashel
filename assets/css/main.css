@@ -1908,7 +1908,7 @@ input, select, textarea {
 /* Wrappers */
 
 	#header-wrapper {
-		padding: 4.5em 0 3em 0;
+		padding: 3.0em 0 3em 0;
 	}
 
 	#features-wrapper {
@@ -1977,7 +1977,7 @@ input, select, textarea {
 			#nav ul li {
 				float: left;
 				line-height: 4.5em;
-				padding-left: 1.5em;
+				padding-left: 0.3em;
 			}
 
 				#nav ul li a, #nav ul li span {
@@ -2249,7 +2249,7 @@ input, select, textarea {
 		/* Wrappers */
 
 			#header-wrapper {
-				padding: 3em 0 1em 0;
+				padding: 2.5em 0 3em 0;
 				text-align: center;
 			}
 
@@ -2641,7 +2641,7 @@ input, select, textarea {
 		/* Wrappers */
 
 			#header-wrapper {
-				padding: 3em 0 1.5em 0;
+				padding: 2em 0 1.5em 0;
 			}
 
 			#banner-wrapper {
