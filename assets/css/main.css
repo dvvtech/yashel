@@ -2419,10 +2419,10 @@ input, select, textarea {
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
 				backface-visibility: hidden;
-				-moz-transform: translateX(-275px);
-				-webkit-transform: translateX(-275px);
-				-ms-transform: translateX(-275px);
-				transform: translateX(-275px);
+				-moz-transform: translateX(-301px);
+				-webkit-transform: translateX(-301px);
+				-ms-transform: translateX(-301px);
+				transform: translateX(-301px);
 				-moz-transition: -moz-transform 0.5s ease;
 				-webkit-transition: -webkit-transform 0.5s ease;
 				-ms-transition: -ms-transform 0.5s ease;
@@ -2433,7 +2433,7 @@ input, select, textarea {
 				overflow-y: auto;
 				position: fixed;
 				top: 0;
-				width: 275px;
+				width: 301px;
 				z-index: 10002;
 				background: #fff;
 				box-shadow: inset -3px 0px 0px 0px #dfdfdf;
@@ -2484,17 +2484,17 @@ input, select, textarea {
 				}
 
 			body.navPanel-visible #page-wrapper {
-				-moz-transform: translateX(275px);
-				-webkit-transform: translateX(275px);
-				-ms-transform: translateX(275px);
-				transform: translateX(275px);
+				-moz-transform: translateX(301px);
+				-webkit-transform: translateX(301px);
+				-ms-transform: translateX(301px);
+				transform: translateX(301px);
 			}
 
 			body.navPanel-visible #navToggle {
-				-moz-transform: translateX(275px);
-				-webkit-transform: translateX(275px);
-				-ms-transform: translateX(275px);
-				transform: translateX(275px);
+				-moz-transform: translateX(301px);
+				-webkit-transform: translateX(301px);
+				-ms-transform: translateX(301px);
+				transform: translateX(301px);
 			}
 
 			body.navPanel-visible #navPanel {
