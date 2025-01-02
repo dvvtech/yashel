@@ -3,31 +3,98 @@
 
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>    
+    
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
 
-    
+    <section id="examples" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>
+                        <i class="fa fa-camera-retro heading-icon" aria-hidden="true"></i>
+                        Simple Image Gallery
+                    </h3>
 
-                    
-                            
+                    <ul class="box-container three-cols">
+                        <li class="box">
+                            <div class="inner">
+
+
                                 <a href="../images/2024/festival.jpg" class="glightbox">
                                     <img src="../images/2024/festival_t.jpg" alt="image">
                                 </a>
-                            
-                    
-                            
+                            </div>
+                        </li>
+                        <li class="box">
+                            <div class="inner">
+
                                 <a href="../images/2024/cert1.jpg" class="glightbox">
                                     <img src="../images/2024/cert1_t.jpg" alt="image">
                                 </a>
-                            
-                    
 
-                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
     <script>
-        var lightbox = GLightbox();            
+        var lightbox = GLightbox();
+            lightbox.on('open', (target) => {
+                console.log('lightbox opened');
+            });
+            var lightboxDescription = GLightbox({
+                selector: '.glightbox2'
+            });
+            var lightboxVideo = GLightbox({
+                selector: '.glightbox3'
+            });
+            lightboxVideo.on('slide_changed', ({ prev, current }) => {
+                console.log('Prev slide', prev);
+                console.log('Current slide', current);
+
+                const { slideIndex, slideNode, slideConfig, player } = current;
+
+                if (player) {
+                    if (!player.ready) {
+                        // If player is not ready
+                        player.on('ready', (event) => {
+                            // Do something when video is ready
+                        });
+                    }
+
+                    player.on('play', (event) => {
+                        console.log('Started play');
+                    });
+
+                    player.on('volumechange', (event) => {
+                        console.log('Volume change');
+                    });
+
+                    player.on('ended', (event) => {
+                        console.log('Video ended');
+                    });
+                }
+            });
+
+            var lightboxInlineIframe = GLightbox({
+                selector: '.glightbox4'
+            });            
     </script>
 </body>
 
