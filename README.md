@@ -9,3 +9,5 @@ navToggle  menu button for small screen
 navPanel   side menu
 
 Formatting Shift + Alt + F
+
+Image gallery: https://biati-digital.github.io/glightbox/
