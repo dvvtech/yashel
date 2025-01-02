@@ -9,18 +9,12 @@
 <head>
 	<title>Verti by HTML5 UP</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />	
     <link rel="stylesheet" href="../assets/css/main.css" />
     
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 	<script>
-
-        const lightbox = GLightbox({
-            touchNavigation: true,
-            loop: true,
-            autoplayVideos: true
-        });
 
 		async function loadComponent(id, file) {
 			const response = await fetch(file);
@@ -131,11 +125,11 @@
                         для биологии (расширение познания свойств жизни); для психолого-педагогической практики (расширение мировоззрения учеников и студентов,
                         раскрытие и направление творческого потенциала).</p>
 
-                        <a href="../images/2024/festival.jpg" class="glightbox3" data-gallery="gallery1">
+                        <a href="../images/2024/festival.jpg" class="glightbox">
                             <img src="../images/2024/festival_t.jpg" alt="image">
                         </a>
                     
-                        <a href="../images/2024/cert1.jpg" class="glightbox3" data-gallery="gallery1">
+                        <a href="../images/2024/cert1.jpg" class="glightbox">
                             <img src="../images/2024/cert1_t.jpg" alt="image">
                         </a>
                     
@@ -154,6 +148,9 @@
 	</div>
 
 	<!-- Scripts -->
+	<script>
+        var lightbox = GLightbox();            
+    </script>
 
 	<script src="../assets/js/jquery.min.js"></script>
 	<script src="../assets/js/jquery.dropotron.min.js"></script>
