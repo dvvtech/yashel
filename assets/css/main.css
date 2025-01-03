@@ -2094,6 +2094,12 @@ input, select, textarea {
 			margin-bottom: 0.5em;
 		}
 
+		#banner .bimage {
+			width: 100%;
+			margin-bottom: 1.0em;
+			border-radius: 6px;
+		}
+
 			#banner .button.icon:before {
 				position: absolute;
 				right: 0.15em;
