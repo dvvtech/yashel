@@ -192,6 +192,17 @@ input, select, textarea {
 		margin-bottom: 2em;
 	}
 
+	video {
+        max-width: 100%; /* Ограничивает ширину видео */
+        height: auto; /* Автоматически регулирует высоту, сохраняя пропорции */
+        display: block; /* Убирает лишние отступы */
+        margin: 0 auto; /* Центрирует видео */
+    }
+
+    center {
+        width: 100%; /* Центрирование с учетом всей ширины */
+    }
+
 /* Container */
 
 	.container {
@@ -2151,6 +2162,8 @@ input, select, textarea {
 				font-size: 12pt;
 			}
 
+			
+
 	}
 
 /* Large */
@@ -2163,7 +2176,7 @@ input, select, textarea {
 				font-size: 11pt;
 			}
 
-	}
+	}	
 
 /* Medium */
 
@@ -2526,6 +2539,8 @@ input, select, textarea {
 				font-size: 13pt;
 				margin: 0 0 1em 0;
 			}
+
+			
 
 		/* Section/Article */
 
