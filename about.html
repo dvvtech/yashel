@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Яш-Эль</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<script>
+		async function loadComponent(id, file) {
+			const response = await fetch(file);
+			const content = await response.text();
+			document.getElementById(id).innerHTML = content;
+		}
+		document.addEventListener("DOMContentLoaded", () => {
+			//loadComponent("header", "header.html");
+			loadComponent("footer", "../footer.html");
+		});
+	</script>
+</head>
+
+<body class="is-preload no-sidebar">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header-wrapper">
+			<header id="header" class="container">
+
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="../index.html">Яш-Эль</a></h1>
+					<span>Центр альтернативной</br> психологии</span>
+				</div>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="../index.html">Главная</a></li>
+						<li>
+							<a href="#">Психография</a>
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li><a href="#">Новости</a></li>
+								<li>
+									<a href="#">Гармонизаторы</a>
+									<ul>
+										<li><a href="#">Песочные часы Яй-Осидо</a></li>
+										<li><a href="#">Очки Яй-Осидо</a></li>
+										<li><a href="#">Гармонизатор Ключ Жизни</a></li>
+										<li><a href="#">Фазовый портрет "Материнство"</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Статьи</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">О Нас</a></li>
+						<li><a href="../right-sidebar.html">Метод</a></li>
+                        <li><a href="right-sidebar.html">Продукты</a></li>
+						<li><a href="../news.html">Новости</a></li>						
+					</ul>
+				</nav>
+
+			</header>
+		</div>
+
+		<!-- Main -->
+		<div id="main-wrapper">
+			<div class="container">
+				<div id="content">
+
+					<!-- Content -->
+					<article>
+
+						<h2>Центр альтернативной психологии </br> "Яш-Эль"</h2>
+
+						<p>Волгоградский Центр Альтернативной Психологии «Яш-Эль» был создан Международной Школы Альтернативной Психологии Ибадова Яшара Садай оглы в 2004г.
+                            Директор Центра «Яш-Эль» - Росликова Елена Владимировна, дипломированный психолог, ведущий российский специалист B области разработки и
+                            применения Альтернативной Психологии Я.С.Ибадова.</br>
+                            Наш центр является основным центром Альтернативной Психологии в России.</br>
+                            В центре «Яш-Эль» активно проводится:</br>
+                            • научно-исследовательская работа</br>
+                            методов
+                            • практическая работа по внедрению методов и технологий Альтернативной Психологии Я.С.Ибадова во все сферы человеческой жизнедеятельности</br>
+                            • педагогическая работа по обучению специалистов-психографов</br>
+                            • психологическое консультирование с применением метода психографии.
+                            Центр «Яш-Эль» проводит лекции, мастер-классы, обучающие семинары на базе Вузов, активно участвует в международных научных конференциях.</p>
+
+					</article>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer"></div>
+
+	</div>
+
+	<!-- Scripts -->
+
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/jquery.dropotron.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
