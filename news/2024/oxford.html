@@ -7,6 +7,9 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="../../assets/css/main.css" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 	<script>
 		async function loadComponent(id, file) {
 			const response = await fetch(file);
@@ -75,7 +78,11 @@
                         В ходе деловой встречи состоялось вручение наград и было объявлено об открытии кафедры Альтернативной психологии Яшара Ибадова.
                         Была представлена видео-презентация новой науки «Альтернативная психология», автором которой является выдающийся азербайджанский ученый Я. Ибадов.</p>
 
-                        <img class="image left" src="../../images/2024/certoxford.jpg" width="285" class='left' alt='Седьмой ключ' />
+						<img class="image left" src="../../images/2024/certoxford_t.jpg" width="285" class='left' alt='Седьмой ключ' />
+
+						<!--<a class="image left" width="285" href="../../images/2024/certoxford_t.jpg" class="glightbox">
+							<img width="285" src="../../images/2024/certoxford_t.jpg" style="margin-left: 20px;" width="300" alt="image">
+						</a>-->
 
 						<p>Выдан Сертификат, в котором говорится, что были соблюдены все необходимые условия, предписанные АСО. И 7 ноября 2024 года официально
                         открыта кафедра Альтернативной психологии Яшара Ибадова и выдана лицензия для реализации утвержденной концепции развития.</p>
@@ -98,6 +105,9 @@
 	</div>
 
 	<!-- Scripts -->
+	<script>
+		var lightbox = GLightbox();            
+	</script>
 
 	<script src="../../assets/js/jquery.min.js"></script>
 	<script src="../../assets/js/jquery.dropotron.min.js"></script>
