@@ -4,6 +4,7 @@ https://dvvtech.github.io/yashel/
 
 plugin for vs code: Live Server
 http://localhost:5500/
+для локального запуска достаточно нажать кноку в нижнем правом углу Port: xxxx
 
 navToggle  menu button for small screen
 navPanel   side menu
