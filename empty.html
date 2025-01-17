@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Яш-Эль</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script>
+        async function loadComponent(id, file) {
+            const response = await fetch(file);
+            const content = await response.text();
+            document.getElementById(id).innerHTML = content;
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            //loadComponent("header", "header.html");
+            loadComponent("footer", "footer.html");
+        });
+    </script>
+</head>
+
+<body class="is-preload no-sidebar">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header-wrapper">
+			<header id="header" class="container">
+
+				<!-- Logo -->
+				<div id="logo">					
+					<h1><a href="index.html">Яш-Эль</a></h1>					
+					<span>Центр альтернативной</br> психологии</span>
+					
+				</div>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="index.html">Главная</a>
+							<ul>
+								<li><a href="#">Библиотека</a></li>
+								<li><a href="#">Новые статьи</a></li>								
+								<li><a href="response/reviews.html">Отзывы</a></li>
+							</ul>
+						</li>
+						<li><a href="psychography.html">Психография</a></li>
+						<li><a href="about.html">О Нас</a></li>
+						<li><a href="method.html">Метод</a></li>
+						<li><a href="right-sidebar.html">Продукты</a></li>
+						<li><a href="news.html">Новости</a></li>						
+					</ul>
+				</nav>
+
+			</header>
+		</div>
+
+        <!-- Main -->
+        <div id="main-wrapper">
+            <div class="container">
+                <div id="content">
+
+                    <!-- Content -->
+                    <article>
+
+                        <h2>No Sidebar</h2>
+                        <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.</p>
+                        <h3>More intriguing information</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
+                        </p>
+
+                    </article>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
