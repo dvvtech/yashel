@@ -14,3 +14,6 @@ Formatting Shift + Alt + F
 Image gallery: https://biati-digital.github.io/glightbox/
 
 css c 2144 begin screen styles
+
+
+https://metrika.yandex.ru/list?period=today&group=dekaminute
