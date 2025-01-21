@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Яш-Эль</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script>
+        async function loadComponent(id, file) {
+            const response = await fetch(file);
+            const content = await response.text();
+            document.getElementById(id).innerHTML = content;
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            //loadComponent("header", "header.html");
+            loadComponent("footer", "footer.html");
+        });
+    </script>
+</head>
+
+<body class="is-preload no-sidebar">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header-wrapper">
+            <header id="header" class="container">
+
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="index.html">Яш-Эль</a></h1>
+                    <span>Центр альтернативной</br> психологии</span>
+
+                </div>
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li class="current"><a href="index.html">Главная</a>
+                            <ul>
+                                <li><a href="#">Библиотека</a></li>
+                                <li><a href="#">Новые статьи</a></li>
+                                <li><a href="response/reviews.html">Отзывы</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="psychography.html">Психография</a></li>
+                        <li><a href="about.html">О Нас</a></li>
+                        <li><a href="method.html">Метод</a></li>
+                        <li><a href="right-sidebar.html">Продукты</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+        </div>
+
+        <!-- Main -->
+        <div id="main-wrapper">
+            <div class="container">
+                <div id="content">
+
+                    <!-- Content -->
+
+                    <h2>Гармонизаторы</h2>
+
+                    <!--<img src="gallery/harmonizers/yo2.jpg" width="240" width="290" alt='Песочные Часы  ЯЙ-ОСИДО' />-->
+
+                    <div class="row gtr-200">
+                        <div class="col-4 col-12-medium">
+
+                            <!-- Sidebar -->
+                            <div>
+                                <section class="widget thumbnails">
+
+                                    <div class="grid">
+                                        <div class="row gtr-50">
+                                            <div class="col-12">
+                                                <a class="image fit">
+                                                    <img src="images/harmonizers/yo2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+                        <div class="col-8 col-12-medium imp-medium">
+
+                            <!-- Content -->
+                            <div id="content">
+                                <section class="last">
+                                    <h3>Гармонизатор “Песочные часы “ЯЙ-ОСИДО”</h3>
+                                    <p> Известно, что в песочных часах время движется сверху вниз. Временной срез этих часов зависит как от количества песка внутри них, так
+                                    и от скорости его просачивания из одной половины колбы в другую. Скорость движения песка сверху вниз можно уподобить скорости расходования
+                                    человеком своей жизненной энергии.</p>
+                                    <a href="news/2024/festival2024.html"
+                                        class="button icon solid fa-arrow-circle-right">Читать далее</a>
+                                </section>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    </br>
+                    <hr>
+                    </br>
+
+                    <div class="row gtr-200">
+                        <div class="col-4 col-12-medium">
+
+                            <!-- Sidebar -->
+                            <div>
+                                <section class="widget thumbnails">
+
+                                    <div class="grid">
+                                        <div class="row gtr-50">
+                                            <div class="col-12">
+                                                <a class="image fit">
+                                                    <img src="images/harmonizers/gc6.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+                        <div class="col-8 col-12-medium imp-medium">
+
+                            <!-- Content -->
+                            <div id="content">
+                                <section class="last">
+                                    <h3>Очки «ЯЙ-ОСИДО» с цветными стеклами</h3>
+                                    <p>Очки имеют комплект съемных цветных насадок с символом «Зеркало Жизни». В данных очках позитивное действие
+                                    символа «Яй-осидо» сочетается с возможностями цветотерапии и это взаимодополняет и усиливает
+                                    положительные эффекты.</p>
+                                    <a href="news/2024/festival2024.html"
+                                        class="button icon solid fa-arrow-circle-right">Читать далее</a>
+                                </section>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
