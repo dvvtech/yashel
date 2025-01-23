@@ -2725,8 +2725,12 @@ input, select, textarea {
 			}
 
 			#logo img {
-				margin-left: 17px;
+				margin-left: 7px;
 				width: 55px;
+			}
+
+			#logo span {    
+				margin-left: 0.5em; /* Расстояние между h1 и span */    
 			}
 
 		/* Banner */
