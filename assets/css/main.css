@@ -1919,7 +1919,7 @@ input, select, textarea {
 /* Wrappers */
 
 	#header-wrapper {
-		padding: 3.0em 0 3em 0;
+		padding: 2.5em 0 2.5em 0;
 	}
 
 	#features-wrapper {
@@ -1961,6 +1961,11 @@ input, select, textarea {
     margin: 0; /* Убираем внешние отступы */
 }
 
+#logo img {
+	margin-left: 17px;
+	width: 74px;
+}
+
 #logo span {
     font-weight: 800;
     font-size: 0.9em;
@@ -1988,7 +1993,7 @@ input, select, textarea {
 			#nav ul li {
 				float: left;
 				line-height: 4.5em;
-				padding-left: 0.3em;
+				padding-left: 0;
 			}
 
 				#nav ul li a, #nav ul li span {
@@ -2176,6 +2181,14 @@ input, select, textarea {
 				font-size: 11pt;
 			}
 
+			#logo img {
+				margin-left: 5px;
+				width: 55px;
+			}
+
+			#logo span {    
+				margin-left: 0.5em; /* Расстояние между h1 и span */    
+			}
 	}	
 
 /* Medium */
@@ -2312,7 +2325,16 @@ input, select, textarea {
 			}
 		
 			#logo h1, #logo span {
-				text-align: center; /* Центрируем текстовые элементы */
+				text-align: center; /* Центрируем текстовые элементы */				
+			}
+
+			#logo img {
+				margin-left: 17px;
+				width: 72px;
+			}
+
+			#logo span {    
+				margin-left: 1.25em; /* Расстояние между h1 и span */    
 			}
 
 		/* Nav */
@@ -2700,6 +2722,11 @@ input, select, textarea {
 		
 			#logo span {
 				font-size: 0.9em;
+			}
+
+			#logo img {
+				margin-left: 17px;
+				width: 55px;
 			}
 
 		/* Banner */
