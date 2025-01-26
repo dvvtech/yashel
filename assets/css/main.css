@@ -2092,7 +2092,7 @@ input, select, textarea {
 
 	#banner {
 		position: relative;
-		padding: 4.5em;
+		padding: 3.5em;
 	}
 
 		#banner h2 {
@@ -2345,7 +2345,7 @@ input, select, textarea {
 		/* Banner */
 
 			#banner {
-				padding: 4.5em 3em;
+				padding: 3.5em 2em;
 				text-align: center;
 			}
 
