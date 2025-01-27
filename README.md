@@ -26,3 +26,8 @@ c1921
 	}
 
     <img src="images/logo1.png" width="110px" style="margin-left: 20px;" alt="" />
+
+
+
+
+<img src="../images/articles/doctor1.jpg" class="image left" alt="" />	
