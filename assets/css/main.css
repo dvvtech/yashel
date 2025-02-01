@@ -208,8 +208,30 @@ input, select, textarea {
 
 .mycenter
 {
-	text-align: center; 
+	text-align: center; 	
 }
+
+.mycenter.green {
+	color: green;
+  }
+
+  .mycenter.green p {
+	color: green;
+  }
+
+  .mycenter.green b {
+	color: green;
+  }
+
+/*.mycenter p
+{	
+	color: green;
+}
+
+.mycenter b
+{	
+	color: green;
+}*/
 
 	.container {
 		margin: 0 auto;
