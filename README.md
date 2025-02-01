@@ -34,8 +34,18 @@ c1921
 	</p>
 <div>
 
+<div class="mycenter green">
+	<p>
+		В основе разработки использован                                
+	</p>
+<div>
+
 
 <img src="../images/articles/doctor1.jpg" class="image left" alt="" />	
+
+<a href="../../images/2024/festival.jpg" class="glightbox">
+								<img src="../../images/2024/festival_t.jpg" style="margin-right: 20px;" width="300" alt="image">
+							</a>
 
 todo:
 1. http://127.0.0.1:5501/articles/volgograd.html в конце изображения не масштабируются при маленьком экране не влезают
