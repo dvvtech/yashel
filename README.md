@@ -28,6 +28,14 @@ c1921
     <img src="images/logo1.png" width="110px" style="margin-left: 20px;" alt="" />
 
 
+<div class="mycenter">
+	<p>
+		В основе разработки использован                                
+	</p>
+<div>
 
 
 <img src="../images/articles/doctor1.jpg" class="image left" alt="" />	
+
+todo:
+1. http://127.0.0.1:5501/articles/volgograd.html в конце изображения не масштабируются при маленьком экране не влезают
