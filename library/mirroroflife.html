@@ -7,6 +7,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
+    <style>
+        /* Общие стили */
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+            /* Разрешаем перенос элементов на новую строку */
+        }
+
+        .image-item {
+            text-align: center;
+            flex: 1 1 calc(50% - 40px);
+            /* Каждый элемент занимает половину ширины контейнера */
+            max-width: 400px;
+            /* Максимальная ширина одного элемента */
+        }
+
+        .image-item img {
+            width: 40%;
+            /* Изображение растягивается по ширине родительского блока */
+            height: auto;
+            /* Сохраняем пропорции изображения */
+            object-fit: cover;
+            /* Для сохранения пропорций изображения */
+            border-radius: 4px;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Стили для маленьких экранов */
+        @media (max-width: 768px) {
+            .gallery-container {
+                flex-direction: column;
+                /* Элементы располагаются вертикально */
+                align-items: center;
+                /* Центрируем элементы по горизонтали */
+            }
+
+            .image-item {
+                flex: none;
+                /* Отключаем гибкость */
+                width: 100%;
+                /* Элементы занимают всю доступную ширину */
+                max-width: none;
+                /* Убираем ограничение максимальной ширины */
+            }
+        }
+    </style>
     <script>
         async function loadComponent(id, file) {
             const response = await fetch(file);
@@ -126,12 +181,37 @@
                             На основании языка психограммы получены новые проявления жизненной энергии (или энергии
                             «ци») в виде Ян и Инь– символов – позитивных ключей психограммы (рис 1.1, 1.2).
                         </p>
-                        <img src="../images/articles/rightSpiral.jpg" alt='Седьмой ключ' />
-                        <img src="../images/articles/leftSpiral.jpg" alt='Седьмой ключ' />
-                        <p>
 
+                        <div class="gallery-container">
+                            <div class="image-item">
+                                <img src="../images/articles/rightSpiral.jpg" width="300"
+                                    alt="Описание первого изображения">
+                                <div class="caption">Рис 1.1</div>
+                            </div>
+
+                            <div class="image-item">
+                                <img src="../images/articles/leftSpiral.jpg" width="300"
+                                    alt="Описание второго изображения">
+                                <div class="caption">Рис 1.2</div>
+                            </div>
+                        </div>
+
+                        <p>
                             Они соответствуют спиралям янского и иньского характера (рис 2.1, 2.2).
                         </p>
+                        <div class="gallery-container">
+                            <div class="image-item">
+                                <img src="../images/articles/key9.jpg" width="300"
+                                    alt="Описание первого изображения">
+                                <div class="caption">Рис 2.1</div>
+                            </div>
+
+                            <div class="image-item">
+                                <img src="../images/articles/key6.jpg" width="300"
+                                    alt="Описание второго изображения">
+                                <div class="caption">Рис 2.2</div>
+                            </div>
+                        </div>
                         <p>
 
                             При объединении ключей с соответствующими спиралями образуется новый символ, названный нами
