@@ -7,6 +7,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
     <script>
         async function loadComponent(id, file) {
             const response = await fetch(file);
@@ -64,8 +68,10 @@
                     <article>
 
                         <h2>Гармонизатор "Ключ Жизни"</h2>
-                        <p>
-                            <img src="../images/harmonizers/kl1_t.png" class="image left" alt="" />
+                        <p>                            
+                            <a href="../images/harmonizers/kl1_t.png" class="glightbox">
+                                <img src="../images/harmonizers/kl1_t.png" class="image left">
+                            </a>
                             На основе «позитивного ключа» психограммы Я.С.Ибадовым в 2005 г. был создан гармонизатор
                             «Ключ Жизни». Гармонизатор
                             выполнен из природного материала в виде витков спирали, имеющих правостороннее – Ян и
@@ -167,6 +173,9 @@
     </div>
 
     <!-- Scripts -->
+    <script>
+        var lightbox = GLightbox();            
+    </script>
 
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/jquery.dropotron.min.js"></script>
