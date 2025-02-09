@@ -49,3 +49,7 @@ c1921
 
 todo:
 1. http://127.0.0.1:5501/articles/volgograd.html в конце изображения не масштабируются при маленьком экране не влезают
+
+
+info:
+1. <img src="../images/articles/doctor1.jpg" class="image left" alt="" loading="lazy" />	
