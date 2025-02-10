@@ -7,6 +7,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
     <script>
         async function loadComponent(id, file) {
             const response = await fetch(file);
@@ -71,7 +75,7 @@
                             представителей бизнеса, награждение
                             бизнес-лидеров и торжественный ужин в салоне Кавальери.
                         </p>
-                        <br />
+                        
                         <div class="mycenter">
                             <img src="../images/2024/ambasador/1.jpeg" alt='Седьмой ключ' />
                         </div>
@@ -128,8 +132,10 @@
                             направления академике Яшаре Ибадове, о самой науке «Альтернативная Психология» и её
                             методе Психографии, о новых технологиях, достижениях и изобретениях в данной сфере.
                         </p>
-                        <div class="mycenter">
-                            <img src="../images/2024/ambasador/5.png" width="560" alt='' /></center><br />
+                        <div class="mycenter">                            
+                            <a href="../images/2024/ambasador/5.png" class="glightbox">
+                                <img src="../images/2024/ambasador/5.png">
+                            </a>
                         </div>
                         <p>
                             В ходе работы Бизнес-ассамблеи Я. Ибадов получил заказы от представителей разных
@@ -155,6 +161,9 @@
     </div>
 
     <!-- Scripts -->
+    <script>
+        var lightbox = GLightbox();            
+    </script>
 
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/jquery.dropotron.min.js"></script>
