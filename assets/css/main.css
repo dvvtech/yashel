@@ -207,6 +207,7 @@ input, select, textarea {
 	
 	/* Стили для заголовков с классом reviews */
 	h3.reviews {
+		font-size: 1.15em;
 		cursor: pointer;
 		color: #000;
 		padding: 10px;
@@ -214,6 +215,7 @@ input, select, textarea {
 		border-radius: 5px;
 		margin: 5px 0;
 		transition: background-color 0.3s ease;
+		font-weight: normal; 
 	}
 
 	/* Изменение цвета при наведении */
