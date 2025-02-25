@@ -204,6 +204,37 @@ input, select, textarea {
         width: 100%; /* Центрирование с учетом всей ширины */
     }
 
+	
+	/* Стили для заголовков с классом reviews */
+	h3.reviews {
+		cursor: pointer;
+		color: #000;
+		padding: 10px;
+		background-color: #f0f0f0;
+		border-radius: 5px;
+		margin: 5px 0;
+		transition: background-color 0.3s ease;
+	}
+
+	/* Изменение цвета при наведении */
+	h3.reviews:hover {
+		background-color: #ddd;
+	}
+
+	/* Скрытие содержимого по умолчанию */
+div.reviews_content {
+	display: none;
+	padding: 10px;
+	background-color: #f9f9f9;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+/* Отображение содержимого при активном заголовке */
+h3.reviews.active + div.reviews_content {
+	display: block;
+}
+
 /* Container */
 
 .mycenter
