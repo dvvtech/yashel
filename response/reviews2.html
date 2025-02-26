@@ -7,6 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <script>
+
+        // Функция для раскрытия блока по id
+        function openSectionById(id) {
+            // Находим заголовок по id
+            const header = document.getElementById(id);
+            if (header && header.classList.contains('reviews')) {
+                // Закрываем все другие блоки
+                document.querySelectorAll('h3.reviews').forEach(h => {
+                    if (h !== header) {
+                        h.classList.remove('active');
+                    }
+                });
+                // Открываем текущий блок
+                header.classList.add('active');
+            }
+        }
+
+        // Обработчик события hashchange
+        window.addEventListener('hashchange', function () {
+            const hash = window.location.hash.substring(1); // Убираем # из хэша
+            openSectionById(hash);
+        });
+
+        // При загрузке страницы проверяем хэш
+        window.addEventListener('load', function () {
+            const hash = window.location.hash.substring(1); // Убираем # из хэша
+            openSectionById(hash);
+        });
+
         async function loadComponent(id, file) {
             const response = await fetch(file);
             const content = await response.text();
