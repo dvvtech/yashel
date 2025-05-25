@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Яш-Эль</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script>
+        async function loadComponent(id, file) {
+            const response = await fetch(file);
+            const content = await response.text();
+            document.getElementById(id).innerHTML = content;
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            //loadComponent("header", "header.html");
+            loadComponent("footer", "footer.html");
+        });
+    </script>
+</head>
+
+<body class="is-preload no-sidebar">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header-wrapper">
+            <header id="header" class="container">
+
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="index.html">Яш-Эль</a></h1>
+                    <img src="images/logo1.png" alt="" />
+                    <span>Центр</br> Альтернативной</br> Психологии</span>
+                </div>
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li class="current"><a href="../index.html">Главная</a>
+                            <ul>
+                                <li><a href="../library/main.html">Библиотека</a></li>
+                                <li><a href="../articles/main.html">Новые статьи</a></li>
+                                <li><a href="../response/reviews.html">Отзывы</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../psychography.html">Психография</a></li>
+                        <li><a href="../about.html">О Нас</a></li>
+                        <li><a href="../method.html">Метод</a></li>
+                        <li><a href="../products.html">Продукты</a></li>
+                        <li><a href="../news.html">Новости</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+        </div>
+
+        <!-- Main -->
+        <div id="main-wrapper">
+            <div class="container">
+                <div id="content">
+
+                    <!-- Content -->
+                    <article>
+
+                        <h2>Метод Байджанаме</h2>
+                        <p>
+                            «К 2004 году сложился уникальный Метод «Байджанаме»
+                            Альтернативной психологии, которую разработал Яшар Ибадов (г. Баку).
+                            Альтернативная психология также изучает вопросы состояния и
+                            взаимодействия живых систем и их фазовых портретов, как зеркальных
+                            отображений фазовых превращений системы во времени. Альтернативная
+                            психология 1 и разработанная нами Теория Причинности взаимодополнили и
+                            взаиморазвили теоретическую базу и практическую работу каждого подхода
+                            по исследованию свойств живых систем и позволили сформулировать:
+                            Причинность – это атрибутивное свойство самой Жизни и содержание живой
+                            системы как формы Жизни 2 . Причинные воздействия охватывают всю жизнь
+                            и всю Вселенную: любое воздействие во Вселенной относится к причинному.
+                            «Все совершается в соответствии с Законом Причинности; случай – лишь
+                            название непознанного Закона» (Гермес Трисмегист)».
+                        </p>
+
+                        <p>
+                            Гоч В.П., Белов С.В. Работа в Причине. Первая ступень. –
+                            Симферополь: Эльиньо, 2004. – 304 с.
+                        </p>
+
+                    </article>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.dropotron.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
