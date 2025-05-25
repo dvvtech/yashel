@@ -1,6 +1,19 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Oleo+Script:400|Open+Sans:300,300italic,600,600italic,800");
 
+@font-face {
+    font-family: 'dao_rus-webfont';
+    src: url('../webfonts/dao_rus-webfont.eot');
+    src: url('../webfonts/dao_rus-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/dao_rus-webfont.woff') format('woff'),
+         url('../webfonts/dao_rus-webfont.svg#Regular') format('svg'),
+         url('../webfonts/dao_rus-webfont.ttf') format('truetype');
+         
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /*
 	Verti by HTML5 UP
 	html5up.net | @ajlkn
