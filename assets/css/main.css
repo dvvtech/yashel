@@ -3107,3 +3107,52 @@ ul.menu li:first-child {
 .contact-form {
     row-gap: 30px; /* Современный способ (поддержка в новых браузерах) */
 }
+
+
+.alert {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.alert {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Иконки (опционально) */
+.alert:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.alert-success:before {
+    content: "\f058"; /* Иконка галочки */
+}
+
+.alert-danger:before {
+    content: "\f06a"; /* Иконка восклицательного знака */
+}

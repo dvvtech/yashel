@@ -51,6 +51,8 @@
 							})
 								.then(response => {
 									if (response.ok) {
+										// Скрываем форму
+										document.getElementById('contactForm').style.display = 'none';
 										// Обработка успешной отправки
 										document.getElementById('message').innerHTML =
 											'<div class="alert alert-success">Сообщение отправлено!</div>';
@@ -187,16 +189,16 @@
 
 							<input type="hidden" id="recaptchaToken" name="recaptchaToken">
 
-							
-								<div class="text-end" style="margin-top: 24px;">
-									<button type="submit" class="educate-btn" id="submitButton">
-										<span class="educate-btn__curve"></span>Отправить сообщение
-									</button>
-								</div>
-								<!-- Alert Message -->
-								<div id="message" class="alert-msg"></div>
-							
+
+							<div class="text-end" style="margin-top: 24px;">
+								<button type="submit" class="educate-btn" id="submitButton">
+									<span class="educate-btn__curve"></span>Отправить сообщение
+								</button>
+							</div>
+
 						</form>
+						<!-- Alert Message -->
+						<div id="message" class="alert-msg"></div>
 
 					</article>
 
