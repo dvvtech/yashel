@@ -12,6 +12,66 @@
 			const response = await fetch(file);
 			const content = await response.text();
 			document.getElementById(id).innerHTML = content;
+
+			const API_BASE_URL = 'https://a33140-9deb.k.d-f.pw';
+			//const API_BASE_URL = 'https://localhost:7287';
+
+			document.getElementById('contactForm').addEventListener('submit', function (e) {
+				e.preventDefault(); // Отменяем стандартную отправку
+
+				// Показываем лоадер (опционально)
+				const submitBtn = document.getElementById('submitButton');
+				submitBtn.disabled = true;
+				submitBtn.textContent = 'Отправка...';
+
+				// Получаем токен reCAPTCHA
+				grecaptcha.ready(() => {
+					grecaptcha.execute('6LdnjlkrAAAAALib66u7KCpFYbTSWppiOO1e6Yax', { action: 'submit' })
+						.then(token => {
+							// Добавляем токен в скрытое поле
+							document.getElementById('recaptchaToken').value = token;
+
+							// Отправляем форму
+							fetch(`${API_BASE_URL}/api/email/send`, {
+								method: 'POST',
+								headers: { 'Content-Type': 'application/json' },
+								body: JSON.stringify({
+									name: document.getElementById('name').value,
+									surname: document.getElementById('last-name').value,
+									fromEmail: document.getElementById('email').value,
+									subject: document.getElementById('subject').value,
+									body: document.getElementById('detail-message').value,
+									type: 2,
+									recaptchaToken: token
+								})
+							})
+								.then(response => {
+									if (response.ok) {
+										// Обработка успешной отправки
+										document.getElementById('message').innerHTML =
+											'<div class="alert alert-success">Сообщение отправлено!</div>';
+									}
+									else {
+										document.getElementById('message').innerHTML =
+											'<div class="alert alert-danger">Ошибка отправки.</div>';
+									}
+								})
+								.catch(error => {
+									document.getElementById('message').innerHTML =
+										'<div class="alert alert-danger">Ошибка отправки.</div>';
+								})
+								.finally(() => {
+									submitBtn.disabled = false;
+									submitBtn.innerHTML = '<span class="educate-btn__curve"></span>Отправить Сообщение';
+								});
+						})
+						.catch(error => {
+							console.error('reCAPTCHA error:', error);
+							submitBtn.disabled = false;
+						});
+				});
+			});
+
 		}
 		document.addEventListener("DOMContentLoaded", () => {
 			//loadComponent("header", "header.html");
@@ -79,6 +139,58 @@
 							• психологическое консультирование с применением метода психографии.</br>
 							Центр «Яш-Эль» проводит лекции, мастер-классы, обучающие семинары на базе Вузов, активно
 							участвует в международных научных конференциях.</p>
+
+						<h3>Обратная связь</h3>
+
+						<h3>Пишите нам в любое время, мы будем рады услышать Вас!</h3>
+
+						<form method="post" action="contact.html" class="contact-form form-validator" id="contactForm">
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="mb-24">
+										<input type="text" class="form-control p_lg" id="name" name="name" required
+											placeholder="Имя">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="mb-24">
+										<input type="text" class="form-control p_lg" id="last-name" name="last-name"
+											required placeholder="Фамилия">
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="mb-24">
+										<input type="email" class="form-control p_lg" id="email" name="email" required
+											placeholder="Email">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="mb-24">
+										<input type="text" class="form-control p_lg" id="subject" name="subject"
+											required placeholder="Тема">
+									</div>
+								</div>
+							</div>
+
+							<div class="mb-24">
+								<textarea class="form-control p_lg" id="detail-message" name="message" rows="5" required
+									placeholder="Сообщение"></textarea>
+							</div>
+
+							<input type="hidden" id="recaptchaToken" name="recaptchaToken">
+
+							<div class="text-end">
+								<button type="submit" class="educate-btn" id="submitButton">
+									<span class="educate-btn__curve"></span>Отправить сообщение
+								</button>
+							</div>
+							<!-- Alert Message -->
+							<div id="message" class="alert-msg"></div>
+						</form>
 
 					</article>
 

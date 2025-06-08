@@ -3091,4 +3091,19 @@ ul.menu li:first-child {
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 	}
+
+}
+
+	/* Увеличиваем отступ между рядами */
+.contact-form .row {
+    margin-bottom: 30px; /* Можно изменить значение (24px, 32px и т. д.) */
+}
+
+/* Если нужно убрать лишний отступ у последнего ряда */
+.contact-form .row:last-child {
+    margin-bottom: 0;
+}
+
+.contact-form {
+    row-gap: 30px; /* Современный способ (поддержка в новых браузерах) */
 }
