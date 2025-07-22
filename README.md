@@ -32,7 +32,7 @@ c1921
 	<p>
 		В основе разработки использован                                
 	</p>
-<div>
+</div>
 
 <div class="mycenter green">
 	<p>
