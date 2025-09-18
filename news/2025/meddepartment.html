@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Яш-Эль</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <script>
+        async function loadComponent(id, file) {
+            const response = await fetch(file);
+            const content = await response.text();
+            document.getElementById(id).innerHTML = content;
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            //loadComponent("header", "header.html");
+            loadComponent("footer", "../../footer.html");
+        });
+    </script>
+</head>
+
+<body class="is-preload no-sidebar">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header-wrapper">
+            <header id="header" class="container">
+
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="../../index.html">Яш-Эль</a></h1>
+                    <img src="../../images/logo1.png" alt="" />
+                    <span>Центр</br> Альтернативной</br> Психологии</span>
+                </div>
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="../../index.html">Главная</a>
+                            <ul>
+                                <li><a href="../../library/main.html">Библиотека</a></li>
+                                <li><a href="../../articles/main.html">Новые статьи</a></li>
+                                <li><a href="../../response/reviews.html">Отзывы</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../psychography.html">Психография</a></li>
+                        <li><a href="../../about.html">О Нас</a></li>
+                        <li><a href="../../method.html">Метод</a></li>
+                        <li><a href="../../products.html">Продукты</a></li>
+                        <li class="current"><a href="../../news.html">Новости</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+        </div>
+
+        <!-- Main -->
+        <div id="main-wrapper">
+            <div class="container">
+                <div id="content">
+
+                    <!-- Content -->
+                    <article>
+
+                        <h2>Открытие нового департамента при Международной Академии Экоэнергетики
+                            Айзербайджанской Республики</h2>
+                        <br />
+                        <p>Новый департамент при Международной Академии Экоэнергетики Азербайджанской республики.
+                            Институт
+                            Ботаники Национальной АН Азербайджана Institute of botany of Academy of Sciences
+                            Институт ботаники имени В. Л. Комарова АН Азербайджанской
+                            Международная Академия Экоэнергетики / International Academy of Ecoenergy</p>
+                        <img src="../../images/news/diploma_s.jpg" alt="" class="d-block mx-auto mb-24">
+
+                        <p>Международная Академия Экоэнергетики Азербайджанской Республики пригласила профессора
+                            Я.С.Ибадова провести семинар о возможностях новой науки Альтернативной психологии в решении
+                            насущных экологических задач. Семинар состоялся 21 июня 2025 года. Выступление профессора
+                            вызвало живой интерес и получило всеобщее одобрение слушателей, ученых и президента
+                            Академии.
+                            <br>Через десять дней после семинара профессора Я.С. Ибадова снова пригласили в Академию для
+                            вручения диплома академика Академии Экоэнергетики АР. В завершении церемонии вручения
+                            диплома
+                            произошло неожиданное событие. Президент Академии предложил профессору Я.С. Ибадову
+                            возглавить
+                            вновь открытый "Медико-биологический и экологический департамент". Таким образом 11 июля
+                            2025
+                            года профессор Я.С. Ибадов был назначен вице-президентом нового департамента Академии
+                            Экоэнергетики АР.
+                            <br>Через несколько дней профессора Я.С.Ибадова пригласили принять участие в форуме
+                            "Целительство, которое приходит из природы".
+                        </p>
+
+                        <p>И 25 июля 2025 года в Институте Ботаники имени В. Л. Комарова Национальной АН
+                            Азербайджана (Institute of botany of Academy of Sciences) состоялся
+                            форум «Целительство, которое приходит из природы». Бурными
+                            продолжительными овациями был встречен доклад профессора, доктора
+                            медико-биологических наук, академика Яшара Ибадова!
+                            <br>В своем выступлении доктор Я.С. Ибадов представил результаты и
+                            достижения своей авторской науки «Альтернативная психология» и
+                            обосновал ее весомый вклад в решение актуальных проблем экологии и
+                            медицины. Методы Альтернативной психологии — психография,
+                            психокоррекция, психургия, создание психограмм и фазовых портретов
+                            живых систем — позволяют на практике корректировать и гармонизировать
+                            психическое состояние каждого человека, его взаимодействие с
+                            окружающей средой на информационно-энергетическом уровне. Это
+                            способствует оздоровлению человека и улучшению условий его жизни.
+                            <br>Желаем уважаемому академику Яшару Ибадову больших успехов на новом поприще!!!
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.dropotron.min.js"></script>
+    <script src="../../assets/js/browser.min.js"></script>
+    <script src="../../assets/js/breakpoints.min.js"></script>
+    <script src="../../assets/js/util.js"></script>
+    <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
