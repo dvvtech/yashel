@@ -7,6 +7,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script>
         async function loadComponent(id, file) {
             const response = await fetch(file);
@@ -71,8 +74,14 @@
                             Ботаники Национальной АН Азербайджана Institute of botany of Academy of Sciences
                             Институт ботаники имени В. Л. Комарова АН Азербайджанской
                             Международная Академия Экоэнергетики / International Academy of Ecoenergy</p>
-                        <img src="../../images/news/diploma_s.jpg" alt="" class="d-block mx-auto mb-24">
 
+                        <div class="mycenter">
+                            <a href="../../images/news/diploma.jpg" class="glightbox">
+                                <img src="../../images/news/diploma_s.jpg" style="margin-right: 20px;" width="300"
+                                    alt="image">
+                            </a>
+                        </div>
+                        <br />
                         <p>Международная Академия Экоэнергетики Азербайджанской Республики пригласила профессора
                             Я.С.Ибадова провести семинар о возможностях новой науки Альтернативной психологии в решении
                             насущных экологических задач. Семинар состоялся 21 июня 2025 года. Выступление профессора
@@ -119,6 +128,9 @@
     </div>
 
     <!-- Scripts -->
+	<script>
+		var lightbox = GLightbox();            
+	</script>
 
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/jquery.dropotron.min.js"></script>
