@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE HTML>
-
 <html>
 
 <head>
@@ -61,18 +60,14 @@
                 /* Убираем ограничение максимальной ширины */
             }
         }
-    </style>
-    <script>
-        async function loadComponent(id, file) {
-            const response = await fetch(file);
-            const content = await response.text();
-            document.getElementById(id).innerHTML = content;
-        }
-        document.addEventListener("DOMContentLoaded", () => {
-            //loadComponent("header", "header.html");
-            loadComponent("footer", "../footer.html");
-        });
-    </script>
+    </style>    
+    <script src="../assets/js/common.js"></script>
+	<script>		
+		document.addEventListener("DOMContentLoaded", () => {
+			//loadComponent("header", "header.html");			
+			loadComponent("footer", "../footer.html");
+		});
+	</script>
 </head>
 
 <body class="is-preload no-sidebar">
