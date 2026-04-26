@@ -3085,7 +3085,7 @@ ul.menu li:first-child {
 		height: 30px;		
 		font-size: 0.8em !important;
 		padding: 0.5em 0.8em;		
-		width: 90px;		
+		width: 70px !important;		
 	}
 
 	/* Banner */
