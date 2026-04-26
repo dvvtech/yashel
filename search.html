@@ -71,15 +71,15 @@
 			}
 			heading.appendChild(link);
 
-			const meta = document.createElement("p");
+			/*const meta = document.createElement("p");
 			meta.className = "search-result-meta";
-			meta.textContent = url || "Ссылка не указана";
+			meta.textContent = url || "Ссылка не указана";*/
 
 			const snippetElement = document.createElement("p");
 			snippetElement.textContent = snippet;
 
 			article.appendChild(heading);
-			article.appendChild(meta);
+			//article.appendChild(meta);
 			article.appendChild(snippetElement);
 
 			/*if (typeof siteId === "number") {
