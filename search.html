@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Поиск | Яш-Эль</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script src="assets/js/common.js"></script>
+	<script>
+		const SEARCH_API_URL = "https://api.cloud-platform.pro/searchhub/search";
+		const DEFAULT_SEARCH_LIMIT = 20;
+
+		function parsePositiveInt(value, fallback = null) {
+			const parsed = Number.parseInt(value, 10);
+			if (!Number.isInteger(parsed) || parsed <= 0) {
+				return fallback;
+			}
+
+			return parsed;
+		}
+
+		function setSearchStatus(message, isError = false) {
+			const statusElement = document.getElementById("search-status");
+			statusElement.hidden = false;
+			statusElement.textContent = message;
+			statusElement.classList.toggle("is-error", isError);
+		}
+
+		function setSearchSummary(total, shown, query) {
+			const summaryElement = document.getElementById("search-summary");
+			summaryElement.hidden = false;
+			summaryElement.textContent = `По запросу "${query}" найдено ${total} результатов. Показано: ${shown}.`;
+		}
+
+		function clearSearchResults() {
+			document.getElementById("search-summary").hidden = true;
+			document.getElementById("search-results").replaceChildren();
+		}
+
+		function getResponseResults(payload) {
+			return Array.isArray(payload?.results) ? payload.results : Array.isArray(payload?.Results) ? payload.Results : [];
+		}
+
+		function getResponseTotal(payload, results) {
+			if (typeof payload?.total === "number") {
+				return payload.total;
+			}
+
+			if (typeof payload?.Total === "number") {
+				return payload.Total;
+			}
+
+			return results.length;
+		}
+
+		function createSearchResultCard(result) {
+			const url = result?.url ?? result?.Url ?? "";
+			const title = result?.title ?? result?.Title ?? url ?? "Без названия";
+			const snippet = result?.snippet ?? result?.Snippet ?? "Описание отсутствует.";
+			const siteId = result?.siteId ?? result?.SiteId;
+
+			const article = document.createElement("article");
+			article.className = "box search-result-card";
+
+			const heading = document.createElement("h3");
+			const link = document.createElement("a");
+			link.textContent = title || "Без названия";
+			if (url) {
+				link.href = url;
+			}
+			heading.appendChild(link);
+
+			const meta = document.createElement("p");
+			meta.className = "search-result-meta";
+			meta.textContent = url || "Ссылка не указана";
+
+			const snippetElement = document.createElement("p");
+			snippetElement.textContent = snippet;
+
+			article.appendChild(heading);
+			article.appendChild(meta);
+			article.appendChild(snippetElement);
+
+			/*if (typeof siteId === "number") {
+				const siteElement = document.createElement("p");
+				siteElement.className = "search-result-site";
+				siteElement.textContent = `Сайт ID: ${siteId}`;
+				article.appendChild(siteElement);
+			}*/
+
+			return article;
+		}
+
+		async function loadSearchResults(query, limit, siteId) {
+			clearSearchResults();
+			setSearchStatus("Ищем материалы...");
+
+			const params = new URLSearchParams({
+				q: query,
+				limit: String(limit)
+			});
+
+			if (siteId !== null) {
+				params.set("siteId", String(siteId));
+			}
+
+			try {
+				const response = await fetch(`${SEARCH_API_URL}?${params.toString()}`);
+				if (!response.ok) {
+					throw new Error(`HTTP ${response.status}`);
+				}
+
+				const payload = await response.json();
+				const results = getResponseResults(payload);
+				const total = getResponseTotal(payload, results);
+
+				setSearchSummary(total, results.length, query);
+				const resultsContainer = document.getElementById("search-results");
+
+				if (results.length === 0) {
+					setSearchStatus("Ничего не найдено. Попробуйте изменить формулировку запроса.");
+					return;
+				}
+
+				resultsContainer.replaceChildren(...results.map(createSearchResultCard));
+				document.getElementById("search-status").hidden = true;
+			} catch (error) {
+				console.error("Search request failed", error);
+				setSearchStatus("Не удалось загрузить результаты поиска. Попробуйте обновить страницу чуть позже.", true);
+			}
+		}
+
+		function initializeSearchPage() {
+			const searchParams = new URLSearchParams(window.location.search);
+			const query = (searchParams.get("q") || "").trim();
+			const limit = parsePositiveInt(searchParams.get("limit"), DEFAULT_SEARCH_LIMIT);
+			const siteId = 2;//parsePositiveInt(searchParams.get("siteId"), null);
+
+			document.getElementById("search-query").value = query;
+			document.getElementById("search-limit").value = String(limit);
+
+			/*const siteIdInput = document.getElementById("search-site-id");
+			if (siteId !== null) {
+				siteIdInput.value = String(siteId);
+				siteIdInput.disabled = false;
+			} else {
+				siteIdInput.disabled = true;
+			}*/
+
+			document.title = query ? `Поиск: ${query} | Яш-Эль` : "Поиск | Яш-Эль";
+
+			if (!query) {
+				clearSearchResults();
+				setSearchStatus("Введите запрос, чтобы увидеть результаты поиска.");
+				return;
+			}
+
+			loadSearchResults(query, limit, siteId);
+		}
+
+		document.addEventListener("DOMContentLoaded", () => {
+			loadComponent("footer", "footer.html");
+			initializeSearchPage();
+		});
+	</script>
+</head>
+
+<body class="is-preload no-sidebar">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header-wrapper">
+			<header id="header" class="container">
+
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="index.html">Яш-Эль</a></h1>
+					<img src="images/logo1.png" alt="" />
+					<span>Центр</br> Альтернативной</br> Психологии</span>
+				</div>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Главная</a>
+							<ul>
+								<li><a href="library/main.html">Библиотека</a></li>
+								<li><a href="articles/main.html">Новые статьи</a></li>
+								<li><a href="response/reviews.html">Отзывы</a></li>
+							</ul>
+						</li>
+						<li><a href="psychography.html">Психография</a></li>
+						<li><a href="about.html">О Нас</a></li>
+						<li><a href="method.html">Метод</a></li>
+						<li><a href="products.html">Продукты</a></li>
+						<li><a href="news.html">Новости</a></li>
+					</ul>
+				</nav>
+
+			</header>
+		</div>
+
+		<!-- Main -->
+		<div id="main-wrapper">
+			<div class="container">
+				<div id="content">
+					<article>
+						<header class="search-page-header">
+							<h2>Результаты поиска</h2>
+							<p>Ищите статьи, новости и материалы по всему сайту.</p>
+						</header>
+
+						<section class="box search-panel">
+							<form action="search.html" method="get" id="search-form" class="search-form">
+								<input type="hidden" name="limit" id="search-limit" value="20" />
+								<input type="hidden" name="siteId" id="search-site-id" />
+								<div class="search-form-row">
+									<input type="text" name="q" id="search-query" placeholder="Введите запрос"
+										aria-label="Поисковый запрос" required />
+									<button type="submit" class="icon solid fa-search search-submit">Найти</button>
+								</div>
+							</form>
+						</section>
+
+						<p id="search-summary" class="search-summary" aria-live="polite" hidden></p>
+						<div id="search-status" class="box search-status" aria-live="polite"></div>
+						<section id="search-results" class="search-results-list"></section>
+					</article>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer"></div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
