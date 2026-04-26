@@ -3083,7 +3083,7 @@ ul.menu li:first-child {
 
 	.nav-search-mobile button {
 		height: 30px;		
-		font-size: 0.8em;
+		font-size: 0.8em !important;
 		padding: 0.5em 0.8em;		
 		width: 90px;		
 	}
