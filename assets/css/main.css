@@ -3082,11 +3082,9 @@ ul.menu li:first-child {
 	}
 
 	.nav-search-mobile button {
-		height: 30px;
-		font-weight: 800;
+		height: 30px;		
 		font-size: 0.8em;
-		padding: 0.5em 0.8em;
-		/*width: auto !important;*/
+		padding: 0.5em 0.8em;		
 		width: 90px;		
 	}
 
