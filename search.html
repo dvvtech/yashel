@@ -76,7 +76,14 @@
 			meta.textContent = url || "Ссылка не указана";*/
 
 			const snippetElement = document.createElement("p");
-			snippetElement.textContent = snippet;
+			snippetElement.textContent = snippet + " ";
+
+			if (url) {
+				const readMoreLink = document.createElement("a");
+				readMoreLink.href = url;
+				readMoreLink.textContent = "Читать далее...";
+				snippetElement.appendChild(readMoreLink);
+			}
 
 			article.appendChild(heading);
 			//article.appendChild(meta);
