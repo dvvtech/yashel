@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
     <script src="../assets/js/common.js"></script>
 
-	<script>		
-		document.addEventListener("DOMContentLoaded", () => {
-			//loadComponent("header", "header.html");			
-			loadComponent("footer", "../footer.html");
-		});
-	</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            //loadComponent("header", "header.html");			
+            loadComponent("footer", "../footer.html");
+        });
+    </script>
 </head>
 
 <body class="is-preload no-sidebar">
@@ -47,7 +47,16 @@
                         <li><a href="../products.html">Продукты</a></li>
                         <li><a href="../news.html">Новости</a></li>
                     </ul>
+                    <form class="nav-search" action="../search.html" method="get">
+                        <input type="text" name="q" placeholder="Поиск..." required />
+                        <button type="submit">Найти</button>
+                    </form>
                 </nav>
+
+                <form class="nav-search-mobile" action="../search.html" method="get">
+                    <input type="text" name="q" placeholder="Поиск..." required />
+                    <button type="submit">Найти</button>
+                </form>
 
             </header>
         </div>
@@ -290,13 +299,13 @@
                         </table>
                         <br />
                         <div class="mycenter">
-                            <img src="../images/articles/dd.jpg" width="550" alt='Седьмой ключ' />                            
+                            <img src="../images/articles/dd.jpg" width="550" alt='Седьмой ключ' />
                         </div>
-                        <div class="mycenter">                            
+                        <div class="mycenter">
                             <p><b>Рис. 1.</b> Водопад Джур-Джур.
-                            Автор картины Дежурнюк Мария, сентябрь-ноябрь 2011 г. <br /> Холст, масло.<br /></p>
+                                Автор картины Дежурнюк Мария, сентябрь-ноябрь 2011 г. <br /> Холст, масло.<br /></p>
                         </div>
-                        
+
                         <p>
                             Таким образом в познании новой науки АП, в работе с ФП, в
                             сопровождении психографов развивалась во времени личность Марии. Главная
