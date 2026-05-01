@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="../assets/js/common.js"></script>
 
-	<script>		
-		document.addEventListener("DOMContentLoaded", () => {
-			//loadComponent("header", "header.html");			
-			loadComponent("footer", "../footer.html");
-		});
-	</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            //loadComponent("header", "header.html");			
+            loadComponent("footer", "../footer.html");
+        });
+    </script>
 </head>
 
 <body class="is-preload no-sidebar">
@@ -46,7 +46,16 @@
                         <li><a href="../products.html">Продукты</a></li>
                         <li><a href="../news.html">Новости</a></li>
                     </ul>
+                    <form class="nav-search" action="../search.html" method="get">
+                        <input type="text" name="q" placeholder="Поиск..." required />
+                        <button type="submit">Найти</button>
+                    </form>
                 </nav>
+
+                <form class="nav-search-mobile" action="../search.html" method="get">
+                    <input type="text" name="q" placeholder="Поиск..." required />
+                    <button type="submit">Найти</button>
+                </form>
 
             </header>
         </div>

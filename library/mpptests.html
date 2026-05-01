@@ -46,7 +46,16 @@
                         <li><a href="../products.html">Продукты</a></li>
                         <li><a href="../news.html">Новости</a></li>
                     </ul>
+                    <form class="nav-search" action="../search.html" method="get">
+                        <input type="text" name="q" placeholder="Поиск..." required />
+                        <button type="submit">Найти</button>
+                    </form>
                 </nav>
+
+                <form class="nav-search-mobile" action="../search.html" method="get">
+                    <input type="text" name="q" placeholder="Поиск..." required />
+                    <button type="submit">Найти</button>
+                </form>
 
             </header>
         </div>
@@ -351,7 +360,7 @@
                         <figure class="space-y-3">
                             <div class="mycenter">
                                 <img src="../images/test7.png" width="550" alt='Седьмой ключ' />
-                            </div>                            
+                            </div>
                             <figcaption class="text-sm text-center text-gray-500">Раскрашенный вариант, то есть тот же
                                 тест
                                 после раскраски</figcaption>

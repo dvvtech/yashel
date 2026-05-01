@@ -60,14 +60,14 @@
                 /* Убираем ограничение максимальной ширины */
             }
         }
-    </style>    
+    </style>
     <script src="../assets/js/common.js"></script>
-	<script>		
-		document.addEventListener("DOMContentLoaded", () => {
-			//loadComponent("header", "header.html");			
-			loadComponent("footer", "../footer.html");
-		});
-	</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            //loadComponent("header", "header.html");			
+            loadComponent("footer", "../footer.html");
+        });
+    </script>
 </head>
 
 <body class="is-preload no-sidebar">
@@ -100,7 +100,16 @@
                         <li><a href="../products.html">Продукты</a></li>
                         <li><a href="../news.html">Новости</a></li>
                     </ul>
+                    <form class="nav-search" action="../search.html" method="get">
+                        <input type="text" name="q" placeholder="Поиск..." required />
+                        <button type="submit">Найти</button>
+                    </form>
                 </nav>
+
+                <form class="nav-search-mobile" action="../search.html" method="get">
+                    <input type="text" name="q" placeholder="Поиск..." required />
+                    <button type="submit">Найти</button>
+                </form>
 
             </header>
         </div>
@@ -196,14 +205,12 @@
                         </p>
                         <div class="gallery-container">
                             <div class="image-item">
-                                <img src="../images/articles/key9.jpg" width="300"
-                                    alt="Описание первого изображения">
+                                <img src="../images/articles/key9.jpg" width="300" alt="Описание первого изображения">
                                 <div class="caption">Рис 2.1</div>
                             </div>
 
                             <div class="image-item">
-                                <img src="../images/articles/key6.jpg" width="300"
-                                    alt="Описание второго изображения">
+                                <img src="../images/articles/key6.jpg" width="300" alt="Описание второго изображения">
                                 <div class="caption">Рис 2.2</div>
                             </div>
                         </div>
