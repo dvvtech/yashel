@@ -1837,6 +1837,11 @@ table thead {
 	margin: 0 2em 1em 0;
 }
 
+.image.right {
+	float: right;
+	margin: 0 0 1em 2em;
+}
+
 .image.centered {
 	display: block;
 	margin: 0 0 2.5em 0;
