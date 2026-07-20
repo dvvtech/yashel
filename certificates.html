@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Сертификаты и дипломы - Яш-Эль</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+	<script src="assets/js/common.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			loadComponent("footer", "footer.html");
+		});
+	</script>
+
+	<style>
+		.cert-card {
+			display: flex;
+			gap: 30px;
+			margin-bottom: 50px;
+			align-items: flex-start;
+			background: #f9f9f9;
+			border-radius: 8px;
+			padding: 25px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+		}
+		.cert-card .cert-image {
+			flex: 0 0 280px;
+			max-width: 280px;
+		}
+		.cert-card .cert-image img {
+			width: 100%;
+			height: auto;
+			border-radius: 6px;
+			box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+			transition: transform 0.25s ease;
+			cursor: pointer;
+		}
+		.cert-card .cert-image img:hover {
+			transform: scale(1.03);
+		}
+		.cert-card .cert-info {
+			flex: 1;
+		}
+		.cert-card .cert-info h3 {
+			margin-top: 0;
+			color: #2a6496;
+		}
+		.cert-card .cert-info .cert-meta {
+			font-size: 0.9em;
+			color: #666;
+			margin-top: 10px;
+		}
+		@media (max-width: 768px) {
+			.cert-card {
+				flex-direction: column;
+			}
+			.cert-card .cert-image {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+		}
+	</style>
+</head>
+
+<body class="is-preload no-sidebar">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header-wrapper">
+			<header id="header" class="container">
+
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="index.html">Яш-Эль</a></h1>
+					<img src="images/logo1.png" alt="" />
+					<span>Центр</br> Альтернативной</br> Психологии</span>
+				</div>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Главная</a>
+							<ul>
+								<li><a href="library/main.html">Библиотека</a></li>
+								<li><a href="articles/main.html">Новые статьи</a></li>
+								<li><a href="response/reviews.html">Отзывы</a></li>
+							</ul>
+						</li>
+						<li><a href="psychography.html">Психография</a></li>
+						<li><a href="about.html">О Нас</a></li>
+						<li><a href="method.html">Метод</a></li>
+						<li><a href="products.html">Продукты</a></li>
+						<li><a href="news.html">Новости</a></li>
+					</ul>
+					<form class="nav-search" action="search.html" method="get">
+						<input type="text" name="q" placeholder="Поиск..." required />
+						<button type="submit">Найти</button>
+					</form>
+				</nav>
+
+				<form class="nav-search-mobile" action="search.html" method="get">
+					<input type="text" name="q" placeholder="Поиск..." required />
+					<button type="submit">Найти</button>
+				</form>
+
+			</header>
+		</div>
+
+		<!-- Main -->
+		<div id="main-wrapper">
+			<div class="container">
+				<div id="content">
+
+					<article>
+
+						<h2>Сертификаты и дипломы</h2>
+
+						<div class="cert-card">
+							<div class="cert-image">
+								<a href="images/certificates/c1.jpg" class="glightbox">
+									<img src="images/certificates/c1.jpg" alt="Сертификат участника конференции" />
+								</a>
+							</div>
+							<div class="cert-info">
+								<h3>Сертификат докладчика</h3>
+								<p>НАСТОЯЩИМ ПОДТВЕРЖДАЕТСЯ, ЧТО <strong>Е. В. Росликова</strong> — директор Регионального социально-экологического центра «Яш-Эль», Международная школа альтернативной психологии — успешно выступила с основным докладом на <strong>VIII Ассамблее Европейской медицинской ассоциации (EMA)</strong> и партнеров «Форум здоровья и жизни Баку».</p>
+								<p>Этот сертификат подтверждает высокий профессиональный уровень доклада и признает значительные достижения, лидерские качества и новаторский вклад обладателя сертификата в свою профессиональную область медицины и оздоровления.</p>
+								<div class="cert-meta">
+									<p><strong>Президент EMA:</strong> Винченцо Костильола</br>
+									<strong>Руководитель оргкомитета:</strong> Лада Литвинова</br>
+									<strong>Дата:</strong> 22–23 мая 2026 г. (онлайн) и 2–6 июня 2026 г. (офлайн)</br>
+									Европейская медицинская ассоциация, Королевство Бельгия</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="cert-card">
+							<div class="cert-image">
+								<a href="images/certificates/c2.jpg" class="glightbox">
+									<img src="images/certificates/c2.jpg" alt="Сертификат докладчика EMA" />
+								</a>
+							</div>
+							<div class="cert-info">
+								<h3>Сертификат участника Международной конференции</h3>
+								<p><strong>Организация:</strong> Международная экоэнергетическая академия</p>
+								<p>Настоящий сертификат вручается <strong>Елене Росликовой</strong> за активное участие в Международной конференции на тему:</p>
+								<p>«Регулирование функционального состояния и его роль в улучшении эндоэкологии живых систем»</p>
+								<div class="cert-meta">
+									<p><strong>Президент БЭА:</strong> Доктор Фаган Алиев</br>
+									<strong>Директор департамента БЭА:</strong> Доктор Яшар Ибадов</br>
+									<strong>Дата:</strong> 04.06.2026 &nbsp;|&nbsp; <strong>№</strong> 0017</p>
+								</div>
+							</div>							
+						</div>
+
+						<div class="cert-card">
+							<div class="cert-image">
+								<a href="images/certificates/c3.jpg" class="glightbox">
+									<img src="images/certificates/c3.jpg" alt="Диплом лауреата Бренд года" />
+								</a>
+							</div>
+							<div class="cert-info">
+								<h3>Диплом лауреата «Бренд года»</h3>
+								<p><strong>2026</strong> &nbsp;|&nbsp; Бренд года в области психологии и экологии</p>
+								<p>Номинация: <strong>«Альтернативная психология»</strong></p>
+								<p>Диплом присуждается <strong>Елене Росликовой</strong>, директору Регионального социально-экологического центра «Яш-Эль», психографу, экологу, психологу, коучу, Международной школы альтернативной психологии.</p>
+								<p>В знак признания ее победы в ежегодном международном конкурсе профессиональных достижений, отмечающем ее выдающийся вклад в развитие современной альтернативной психологии, инновационные подходы к психографии и экологическому образованию, а также активное внедрение передовых интегративных методов в области благополучия человека и социальной экологии.</p>
+								<div class="cert-meta">
+									<p><strong>Президент EMA:</strong> Доктор Винченцо Костильола</br>
+									<strong>Дата:</strong> 4 июня 2026 г. &nbsp;|&nbsp; <strong>Диплом №</strong> 24</p>
+								</div>
+							</div>
+						</div>
+
+					</article>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer"></div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script>
+		var lightbox = GLightbox();
+	</script>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
