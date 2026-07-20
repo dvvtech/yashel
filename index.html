@@ -559,30 +559,43 @@
 						<div id="sidebar">
 							<section class="widget thumbnails">
 								<h3>Документы</h3>
-								<div class="grid">
-									<div class="row gtr-50">
-										<div class="col-6"><a href="images/2024/certoxford.png"
-												class="image fit glightbox"><img
-													src="images/certificates/certoxford.jpg" alt="" /></a></div>
-										<div class="col-6"><a href="images/certificates/euroCert2.jpg"
-												class="image fit glightbox"><img src="images/certificates/euroCert2.jpg"
-													alt="" /></a></div>
-										<div class="col-6"><a href="images/certificates/certificate 7.jpg"
-												class="image fit glightbox"><img
-													src="images/certificates/certificate 7.jpg" alt="" /></a></div>
-										<div class="col-6"><a href="images/certificates/euro_patent.jpg"
-												class="image fit glightbox"><img
-													src="images/certificates/euro_patent.jpg" alt="" /></a></div>
-										<div class="col-6"><a href="images/certificates/c1.jpg"
-												class="image fit glightbox"><img
-													src="images/certificates/c1.jpg" alt="" /></a></div>
-										<div class="col-6"><a href="images/certificates/c2.jpg"
-												class="image fit glightbox"><img
-													src="images/certificates/c2.jpg" alt="" /></a></div>
-										<div class="col-6"><a href="images/certificates/c3.jpg"
-												class="image fit glightbox"><img
-													src="images/certificates/c3.jpg" alt="" /></a></div>
-									</div>
+								<style>
+									.doc-grid {
+										display: flex;
+										flex-wrap: wrap;
+										gap: 10px;
+										justify-content: center;
+									}
+									.doc-grid .doc-item {
+										flex: 0 0 calc(50% - 5px);
+										max-width: calc(50% - 5px);
+									}
+									.doc-grid .doc-item a {
+										display: block;
+										border-radius: 6px;
+										overflow: hidden;
+										box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+										transition: transform 0.25s ease, box-shadow 0.25s ease;
+										background: #fff;
+									}
+									.doc-grid .doc-item a:hover {
+										transform: translateY(-3px);
+										box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+									}
+									.doc-grid .doc-item img {
+										display: block;
+										width: 100%;
+										height: auto;
+									}
+								</style>
+								<div class="doc-grid">
+									<div class="doc-item"><a href="images/2024/certoxford.png" class="glightbox"><img src="images/certificates/certoxford.jpg" alt="" /></a></div>
+									<div class="doc-item"><a href="images/certificates/euroCert2.jpg" class="glightbox"><img src="images/certificates/euroCert2.jpg" alt="" /></a></div>
+									<div class="doc-item"><a href="images/certificates/certificate 7.jpg" class="glightbox"><img src="images/certificates/certificate 7.jpg" alt="" /></a></div>
+									<div class="doc-item"><a href="images/certificates/euro_patent.jpg" class="glightbox"><img src="images/certificates/euro_patent.jpg" alt="" /></a></div>
+									<div class="doc-item"><a href="images/certificates/c1.jpg" class="glightbox"><img src="images/certificates/c1.jpg" alt="" /></a></div>
+									<div class="doc-item"><a href="images/certificates/c2.jpg" class="glightbox"><img src="images/certificates/c2.jpg" alt="" /></a></div>
+									<div class="doc-item"><a href="images/certificates/c3.jpg" class="glightbox"><img src="images/certificates/c3.jpg" alt="" /></a></div>
 								</div>
 								<!--<a href="#" class="button icon fa-file-alt">More</a>-->
 							</section>
